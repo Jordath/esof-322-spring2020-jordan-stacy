@@ -6,6 +6,7 @@ import java.util.List;
 
 public class BagEquivalence {
 
+    // super interesting comment to verify everything is working
     public static void main(String[] args) {
         List<String> a = Arrays.asList("A", "B", "C", "A");
         List<String> b = Arrays.asList("A", "C", "A", "B", "A");
