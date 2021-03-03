@@ -46,5 +46,3 @@ main function, and selecting run or debug.
 
 * [Spark Java Docs](http://sparkjava.com/documentation)
 * [Velocity Templates Docs](https://velocity.apache.org/engine/2.2/user-guide.html#loops)
-
-:)
