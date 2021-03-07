@@ -9,7 +9,7 @@ public class Homework1 {
 
     @Test
     void fixThisTest() {
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test
@@ -19,6 +19,7 @@ public class Homework1 {
         // please chain the methods
         Student s = Student.builder()
                 .build();
+
 
         assertEquals("Joe", s.getFirstName());
         assertEquals("Smith", s.getLastName());
