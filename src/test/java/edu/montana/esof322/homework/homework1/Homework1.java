@@ -17,6 +17,9 @@ public class Homework1 {
         // add the code to work with this builder
         // please chain the methods
         Student s = Student.builder()
+                .withFirstName("Joe")
+                .withLastName("Smith")
+                .withId("An ID")
                 .build();
 
 
@@ -26,6 +29,9 @@ public class Homework1 {
 
         // build a student and take advantage of the autoid generation
         Student s2 = Student.builder()
+                .withFirstName("Joe")
+                .withLastName("Smith")
+                .withId(null)
                 .build();
 
         assertEquals("Joe", s2.getFirstName());
@@ -37,9 +43,9 @@ public class Homework1 {
     void createABuilder() {
         // TODO - uncomment and make this builder work
         Ski ski = Ski.builder()
-                //.withLength(180)
-                //.withBrand("dps")
-                //.withName("Alchemist Lotus")
+                .withLength(180)
+                .withBrand("dps")
+                .withName("Alchemist Lotus")
                     .build();
         assertEquals("dps", ski.getBrand());
         assertEquals("Alchemist Lotus", ski.getName());
