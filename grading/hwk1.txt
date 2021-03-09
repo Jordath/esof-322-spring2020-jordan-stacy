@@ -28,44 +28,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.esof322.homework.homework1.Homework1
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.046 s <<< FAILURE! - in edu.montana.esof322.homework.homework1.Homework1
-[ERROR] createABuilder  Time elapsed: 0.02 s  <<< ERROR!
-java.lang.NullPointerException
-	at edu.montana.esof322.homework.homework1.Homework1.createABuilder(Homework1.java:44)
-
-[ERROR] useABuilder  Time elapsed: 0.008 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <Joe> but was: <null>
-	at edu.montana.esof322.homework.homework1.Homework1.useABuilder(Homework1.java:23)
-
-[ERROR] fixThisTest  Time elapsed: 0.001 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at edu.montana.esof322.homework.homework1.Homework1.fixThisTest(Homework1.java:12)
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in edu.montana.esof322.homework.homework1.Homework1
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Failures: 
-[ERROR]   Homework1.fixThisTest:12 expected: <true> but was: <false>
-[ERROR]   Homework1.useABuilder:23 expected: <Joe> but was: <null>
-[ERROR] Errors: 
-[ERROR]   Homework1.createABuilder:44 NullPointer
-[INFO] 
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.394 s
-[INFO] Finished at: 2021-03-04T11:10:34-07:00
+[INFO] Total time:  6.320 s
+[INFO] Finished at: 2021-03-09T14:39:58-07:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project ESOF_322_Project: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/carson/Projects/msu/esof-322-spring2021/grading/scripts/repos/jordan_stacy/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
