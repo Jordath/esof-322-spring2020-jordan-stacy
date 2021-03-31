@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class Homework2 {
 
-    int invocationCount = 0;
+    static int invocationCount = 0;
     StringBuilder output = new StringBuilder();
 
     class ThingDoer {
-        void doIt() {
+        public void doIt() {
             output.append("Did it!\n");
         }
     }
