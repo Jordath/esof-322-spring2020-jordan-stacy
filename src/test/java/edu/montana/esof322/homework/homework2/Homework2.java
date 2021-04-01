@@ -8,11 +8,35 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class Homework2 {
 
     static int invocationCount = 0;
-    StringBuilder output = new StringBuilder();
+    static StringBuilder output = new StringBuilder();
 
-    class ThingDoer {
+    interface IDoAThing {
+        void doIt();
+    }
+
+    static class ThingDoer implements IDoAThing{
         public void doIt() {
             output.append("Did it!\n");
+        }
+    }
+
+    private static class ThingDoerFactory {
+        public static IDoAThing create() {
+            return new ThingDoer();
+        }
+    }
+
+    class ThingDoerProxy implements IDoAThing{
+        IDoAThing _proxiedThing;
+
+        public ThingDoerProxy(IDoAThing proxiedThing){
+            _proxiedThing = proxiedThing;
+        }
+
+        @Override
+        public void doIt() {
+            invocationCount++;
+            _proxiedThing.doIt();
         }
     }
 
@@ -25,13 +49,17 @@ public class Homework2 {
     void theAssignment() {
         // Step 1: extract an interface for ThingDoer, IDoAThing and
         //         replace the variable below with
+        //ThingDoer thingDoer = new ThingDoer();
 
         // Step 2: replace this new expression with a factory to produce
         //         IDoAThings
-        ThingDoer thingDoer = new ThingDoer();
+        //IDoAThing thingDoer = ThingDoerFactory.create();
+
 
         // Step 3: use the factory to insert a proxy object that wraps
         //         a ThingDoer and increments the invocationCount
+        IDoAThing thingDoer = new ThingDoerProxy(new ThingDoer());
+
         assertFalse(thingDoer instanceof ThingDoer);
 
         // do the thing a few times...
@@ -47,6 +75,4 @@ public class Homework2 {
         assertEquals(output.toString(),
                 "Did it!\nDid it!\nDid it!\n");
     }
-
-
 }
