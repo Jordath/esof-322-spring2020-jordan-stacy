@@ -60,14 +60,14 @@ public class JLispTest {
     @Test
     public void operatorOtherThanPlus(){
         JLisp testLisp = new JLisp();
-        assertEquals((testLisp.eval("(- 1 1)")), 0);
+        assertEquals(0, (testLisp.eval("(- 1 1)")));
 
     }
 
     @Test
     public void floatsAsArgs(){
         JLisp testLisp = new JLisp();
-        assertEquals((testLisp.eval("(+ 1.5 1.5)")), 3);
+        assertEquals(3, (testLisp.eval("(+ 1.5 1.5)")));
 
     }
 
