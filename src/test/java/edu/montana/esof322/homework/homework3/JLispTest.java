@@ -39,4 +39,48 @@ public class JLispTest {
         assertEquals("Foo", "Bar");
     }
 
+    @Test
+    public void takingMoreThanTwoArgs(){
+        JLisp testLisp = new JLisp();
+        assertEquals(3, (testLisp.eval("(+ 1 1 1)")));
+
+    }
+
+    @Test
+    public void nullAsAnArgument(){
+        JLisp testLisp = new JLisp();
+        try {
+            testLisp.eval(null);
+            fail("Did not throw error");
+        } catch (IllegalArgumentException illegalArgumentException){
+            // test passes
+        }
+    }
+
+    @Test
+    public void operatorOtherThanPlus(){
+        JLisp testLisp = new JLisp();
+        assertEquals((testLisp.eval("(- 1 1)")), 0);
+
+    }
+
+    @Test
+    public void floatsAsArgs(){
+        JLisp testLisp = new JLisp();
+        assertEquals((testLisp.eval("(+ 1.5 1.5)")), 3);
+
+    }
+
+    @Test
+    public void unterminatedParenthesis(){
+        JLisp testLisp = new JLisp();
+        try {
+            testLisp.eval("(+ 1 1");
+            fail("Did not throw error for un-executed lisp statement");
+        } catch (IllegalArgumentException illegalArgumentException){
+            // test passes
+        }
+
+    }
+
 }
