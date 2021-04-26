@@ -40,8 +40,11 @@ public class JLispTest {
     }
 
     @Test
+    // would prefer a more descriptive name like
+    // shouldNotTakeMoreThanTwoArgumetns
     public void takingMoreThanTwoArgs(){
         JLisp testLisp = new JLisp();
+        // should be using the try/catch pattern as below
         assertEquals(3, (testLisp.eval("(+ 1 1 1)")));
 
     }
